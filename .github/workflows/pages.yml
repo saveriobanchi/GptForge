@@ -1,0 +1,56 @@
+name: Check, build and publish White Horizon
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: white-horizon-pages
+  cancel-in-progress: true
+jobs:
+  game:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install browser test runtime
+        run: |
+          pip install playwright==1.56.0
+          python -m playwright install --with-deps chromium
+      - name: Browser QA
+        run: |
+          python -m http.server 4173 -d dist > /tmp/white-horizon-server.log 2>&1 &
+          CHROMIUM_PATH="$(python -c 'from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()')" python tests/browser.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: white-horizon-qa
+          path: test-results/
+      - uses: actions/upload-artifact@v4
+        with:
+          name: white-horizon-browser-build
+          path: dist/
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+      - id: deployment
+        uses: actions/deploy-pages@v4
