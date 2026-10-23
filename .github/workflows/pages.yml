@@ -46,11 +46,23 @@ jobs:
         with:
           name: white-horizon-browser-build
           path: dist/
-      - uses: actions/configure-pages@v5
+      - id: pages
+        uses: actions/configure-pages@v5
+        continue-on-error: true
         with:
           enablement: true
       - uses: actions/upload-pages-artifact@v3
+        if: steps.pages.outcome == 'success'
         with:
           path: dist
       - id: deployment
+        if: steps.pages.outcome == 'success'
         uses: actions/deploy-pages@v4
+      - name: Report optional Pages setup
+        if: steps.pages.outcome == 'failure'
+        run: |
+          cat >> "$GITHUB_STEP_SUMMARY" <<'REPORT'
+          The game build and QA completed. GitHub Pages needs initial repository-owner setup.
+          Open Settings → Pages → Source: GitHub Actions, then rerun this workflow.
+          The playable Sites deployment is https://aetherforge-white-horizon.banchisaverio.chatgpt.site (owner-private).
+          REPORT

@@ -10,3 +10,11 @@
 - Reference checkout is clean and no remote write was made to Claude-AETHERFORGE.
 
 Not verified: physical iPhone Safari, Windows standalone execution, native iOS/Android packaging, Unity compilation, long-duration human balancing, and device thermal/battery behavior. Deployment success is reported separately after the host returns a successful result.
+
+## Additional integration and deployment results
+
+The same game source passed GitHub Actions installation, all nine simulation tests, production build and browser QA in run `40031165692`. The verified build and screenshot/report artifacts were uploaded successfully. Only the initial Pages activation failed because the Actions token lacked repository administration permission.
+
+An additional actual-browser interaction check passed research, frontier survey, expedition launch, the Copperbark reveal animation, and saving/reloading immediately after unlock. Supplies for this UI check were prepared using ordinary gathering commands; inventory grants were not used.
+
+The native Sites deployment returned `succeeded` on 2026-10-23 at 22:10 UTC, with owner-private access and URL https://aetherforge-white-horizon.banchisaverio.chatgpt.site. The hosted game and atlases match the verified GitHub game source.

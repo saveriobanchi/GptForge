@@ -4,7 +4,11 @@ An isometric exploration and infrastructure game, developed separately in **GptF
 
 ## Play
 
-The production browser build is generated in `dist/`. GitHub Actions validates and publishes it to GitHub Pages when Pages is enabled for this repository. The intended Pages address is `https://saveriobanchi.github.io/GptForge/`; check the workflow deployment result before treating that address as live.
+**Live game:** https://aetherforge-white-horizon.banchisaverio.chatgpt.site (owner-private Sites hosting; sign in with the owning ChatGPT account).
+
+**Download the verified browser build:** https://github.com/saveriobanchi/GptForge/actions/runs/40031165692/artifacts/12535780007
+
+The production browser build is also generated locally in `dist/`. GitHub Actions passed installation, all simulation tests, production compilation and browser QA. Initial GitHub Pages activation was denied with `Resource not accessible by integration`; the game was successfully published to Sites instead. To enable the optional Pages mirror, open **Settings → Pages → Build and deployment → Source: GitHub Actions**, then rerun the workflow. No repository visibility change is needed. See [deployment details](docs/DEPLOYMENT.md).
 
 ```sh
 npm ci
