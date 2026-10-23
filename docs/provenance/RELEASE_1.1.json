@@ -1,0 +1,17 @@
+{
+  "version": "1.1.0",
+  "gameSourceCommit": "619b5d1306ade50c301e22453c81f0e4c7ffc131",
+  "hostingSourceCommit": "6a53745bbe748c1934a7baa99f02a5d35e894182",
+  "deploymentId": "appgdep_6adbe8e4624c8191a7c8f861bff8af65",
+  "deploymentStatus": "succeeded",
+  "deploymentTime": "2026-10-23T23:08:35.825715+00:00",
+  "url": "https://aetherforge-white-horizon.banchisaverio.chatgpt.site",
+  "audience": "owner-private",
+  "githubActionsRun": 40037746323,
+  "githubActionsResult": "success",
+  "buildArtifact": 12538236032,
+  "qaArtifact": 12538241179,
+  "localZipSha256": "d425cf89367d1d3e909668c4e382b9466f0e40fe6cd050910bef05b18ffaa1dc",
+  "liveFilesVerified": 9,
+  "liveFilesEvidence": "LIVE_1.1.json"
+}

@@ -1,32 +1,37 @@
 # Delivery and hosting
 
-## Play now
+## Play White Horizon 1.1
 
 https://aetherforge-white-horizon.banchisaverio.chatgpt.site
 
-Sites hosting is owner-private. Sign in with the ChatGPT account that owns this project. No GitHub Pages setup is needed to play this version.
+Sites hosting is owner-private. Sign in with the owning ChatGPT account. Access remains restricted to the owner; no external viewers or groups were added.
 
-The native host returned a successful deployment at 2026-10-23 22:10 UTC. Project ID: `appgprj_6adbdaff29288191818835a0e64c3238`. Deployment ID: `appgdep_6adbdb47397481918c9f8857e2e95e00`.
+The hosting service confirmed **succeeded** at **2026-10-23 23:08:35 UTC**.
 
-The hosting source snapshot is commit `9a72e91f08940e77ec2580f9c8d5cef77ab4f1c2` in the site's managed source repository, matching the game code and assets in GitHub commit `08de5aa1a7a5dfe9b7bbc4d9be827f50cd8dd739` plus the hosting manifest. GptForge remains the primary game repository. Publishing later GitHub changes to Sites requires syncing the corresponding game source to this existing Site; creating another Site is unnecessary.
+- Project: `appgprj_6adbdaff29288191818835a0e64c3238`
+- Deployment: `appgdep_6adbe8e4624c8191a7c8f861bff8af65`
+- Managed source commit: `6a53745bbe748c1934a7baa99f02a5d35e894182`
+- Matching GptForge source: `619b5d1306ade50c301e22453c81f0e4c7ffc131`
 
-## Version 1.1 release
+The UI upgrade includes searchable catalogues, readable ingredient costs, research navigation, persistent resource pins, larger text and improved phone interaction. Existing saves remain compatible. Build publication is gated by the verified asset/dependency register, and all full notices are included in the deployed game and offline cache.
 
-The UI and licensing upgrade is built from the current GptForge source. The build now rejects changed or unregistered media and dependency inputs, and includes `ASSET_LICENSES.md`, `asset-manifest.json`, and all full license notices. Existing saves remain compatible. Publication details for this release are recorded below once the hosting service confirms them.
+Nine files on the live host were verified byte-for-byte against the tested build, including game code, artwork, font, asset register and license notice. See [verification evidence](provenance/LIVE_1.1.json).
 
-## Original 1.0 downloadable build (historical)
+GptForge remains the primary repository. The existing Site was updated; no duplicate Site was created and Claude-AETHERFORGE was not changed.
 
-https://github.com/saveriobanchi/GptForge/actions/runs/40031165692/artifacts/12535780007
+## Verified build and screenshots
 
-QA screenshots and browser report:
-https://github.com/saveriobanchi/GptForge/actions/runs/40031165692/artifacts/12535630442
+GitHub Actions run [40037746323](https://github.com/saveriobanchi/GptForge/actions/runs/40037746323) passed installation, all 11 Node checks, production compilation, the existing browser regression suite and the new UI suite.
 
-GitHub Actions artifacts require GitHub sign-in and are subject to the account's artifact retention period. Rebuild from source with `npm ci && npm run build` after expiry.
+- [Download browser build 1.1](https://github.com/saveriobanchi/GptForge/actions/runs/40037746323/artifacts/12538236032)
+- [Actual gameplay screenshots and QA reports](https://github.com/saveriobanchi/GptForge/actions/runs/40037746323/artifacts/12538241179)
+
+Artifacts require GitHub sign-in and currently expire on 2027-01-21. Rebuild later with `npm ci && npm run build`. A local ZIP is also available at `/workspace/builds/Aetherforge-White-Horizon-1.1-Web.zip`.
 
 ## Optional GitHub Pages mirror
 
-The workflow's first Pages activation failed with the exact API error `Resource not accessible by integration`. Ordinary Actions tokens cannot perform this repository's initial Pages administration. No code or test failure caused that deployment error.
+Initial Pages activation remains blocked by `Resource not accessible by integration`. The workflow keeps successful build and QA artifacts and reports this optional administration step separately from game checks.
 
-Minimum owner action: **GptForge → Settings → Pages → Build and deployment → Source → GitHub Actions**. Then rerun **Check, build and publish White Horizon** in Actions. The expected mirror address is `https://saveriobanchi.github.io/GptForge/`; it is not claimed as live until GitHub confirms deployment. The workflow keeps verified build artifacts and reports missing Pages setup separately from game checks.
+Minimum owner action: **GptForge → Settings → Pages → Build and deployment → Source → GitHub Actions**, then rerun the workflow. The expected mirror address is `https://saveriobanchi.github.io/GptForge/`; it is not claimed as live. No visibility change is needed.
 
-The build uses relative paths, works under a repository subpath, and needs no compressed Unity loader, server rewrites or backend. It is a browser game rather than a Unity WebGL export.
+The browser build uses relative paths and works under a repository subpath. This is a browser game, not a Unity WebGL export or Windows standalone build. Physical iPhone Safari testing remains outstanding.

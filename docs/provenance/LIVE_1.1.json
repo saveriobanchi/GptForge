@@ -1,0 +1,56 @@
+[
+  {
+    "path": "index.html",
+    "http": 200,
+    "sha256": "58d6c7a0282e709f84012006c1e4733e30897e2b41b4a00d5adab1935d703887",
+    "matchesTestedBuild": true
+  },
+  {
+    "path": "game.js",
+    "http": 200,
+    "sha256": "a27ad5eafcb8bd53fe452c33b290f86c7dec2b944d85e65789a95d42b5fe78da",
+    "matchesTestedBuild": true
+  },
+  {
+    "path": "style.css",
+    "http": 200,
+    "sha256": "0fb59b47012c9fbf34d64a6315ef013198586473574188e0115dd890ee8177f5",
+    "matchesTestedBuild": true
+  },
+  {
+    "path": "sw.js",
+    "http": 200,
+    "sha256": "406df8b38eaf8754c43cd3e585c1d5e4437f82e5e86486ff0345bc3683aa1884",
+    "matchesTestedBuild": true
+  },
+  {
+    "path": "asset-manifest.json",
+    "http": 200,
+    "sha256": "754896d09fc3c43a1886eaa074db1507825c45ccfb51bf35b54663382f61e6d7",
+    "matchesTestedBuild": true
+  },
+  {
+    "path": "ASSET_LICENSES.md",
+    "http": 200,
+    "sha256": "b8257e321c4a7a068da16e39bfe347a8784143c841054b7ca75b70a51bc926f9",
+    "matchesTestedBuild": true
+  },
+  {
+    "path": "licenses/PixelifySans-OFL.txt",
+    "http": 200,
+    "sha256": "b66ba46f511a851ab09998b5a5a9fdbb102545a3864cb993095e1745996873a7",
+    "matchesTestedBuild": true
+  },
+  {
+    "path": "fonts/VT323.ttf",
+    "http": 200,
+    "sha256": "cf4de751ada78ceac033dbe16a687742939995b77bc2a052ae17a4957958594d",
+    "matchesTestedBuild": true
+  },
+  {
+    "path": "art/sheet0.png",
+    "http": 200,
+    "sha256": "2fbee171c434508f6d89edc6dbf477bdba709542c20e4d2bf93c1ad0c28824bb",
+    "matchesTestedBuild": true
+  }
+]

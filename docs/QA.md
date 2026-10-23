@@ -10,6 +10,10 @@
 - Fixes verified during this pass: an early mouse click could be incorrectly suppressed on fast/offline startup; search/filter rerenders restarted panel entry fades; panel scroll positions leaked between unrelated menus. All three are corrected.
 - Physical iPhone Safari, native builds, and long human balancing sessions remain untested.
 
+The complete 1.1 source also passed GitHub Actions run `40037746323`: dependency installation, all Node checks, production compilation, both browser suites and build/QA artifact uploads. Native Sites deployment `appgdep_6adbe8e4624c8191a7c8f861bff8af65` succeeded at 23:08:35 UTC on 2026-10-23.
+
+Nine actual published files were retrieved through the owner-private host authorization and compared byte-for-byte with the tested build: HTML, game code, stylesheet, service worker, provenance register, asset credits, Pixelify copyright/license notice, VT323 font and the first atlas. All matched. No private authorization token was saved to disk or included in reports.
+
 ## Original 1.0 delivery (historical)
 
 - Production build: esbuild bundle, static assets and all three atlases emitted successfully.

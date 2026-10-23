@@ -6,6 +6,8 @@ An isometric exploration and infrastructure game, developed separately in **GptF
 
 **Live game:** https://aetherforge-white-horizon.banchisaverio.chatgpt.site (owner-private Sites hosting; sign in with the owning ChatGPT account).
 
+**[Download browser build 1.1](https://github.com/saveriobanchi/GptForge/actions/runs/40037746323/artifacts/12538236032)** · **[Screenshots and QA](https://github.com/saveriobanchi/GptForge/actions/runs/40037746323/artifacts/12538241179)**
+
 **Version 1.1:** a redesigned field interface with textured oak/iron frames, original compass and tool icons, searchable catalogues, ingredient ownership/costs, research prerequisite links, resource details and persistent HUD pins, production filters, larger text, and in-game license credits. Existing saves remain compatible.
 
 The production browser build is also generated locally in `dist/`. GitHub Actions passed installation, all simulation tests, production compilation and browser QA. Initial GitHub Pages activation was denied with `Resource not accessible by integration`; the game was successfully published to Sites instead. To enable the optional Pages mirror, open **Settings → Pages → Build and deployment → Source: GitHub Actions**, then rerun the workflow. No repository visibility change is needed. See [deployment details](docs/DEPLOYMENT.md).
