@@ -10,7 +10,11 @@ The native host returned a successful deployment at 2026-10-23 22:10 UTC. Projec
 
 The hosting source snapshot is commit `9a72e91f08940e77ec2580f9c8d5cef77ab4f1c2` in the site's managed source repository, matching the game code and assets in GitHub commit `08de5aa1a7a5dfe9b7bbc4d9be827f50cd8dd739` plus the hosting manifest. GptForge remains the primary game repository. Publishing later GitHub changes to Sites requires syncing the corresponding game source to this existing Site; creating another Site is unnecessary.
 
-## Verified downloadable build
+## Version 1.1 release
+
+The UI and licensing upgrade is built from the current GptForge source. The build now rejects changed or unregistered media and dependency inputs, and includes `ASSET_LICENSES.md`, `asset-manifest.json`, and all full license notices. Existing saves remain compatible. Publication details for this release are recorded below once the hosting service confirms them.
+
+## Original 1.0 downloadable build (historical)
 
 https://github.com/saveriobanchi/GptForge/actions/runs/40031165692/artifacts/12535780007
 

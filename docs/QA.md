@@ -1,5 +1,17 @@
 # Verified delivery checks
 
+## Version 1.1 — 2026-10-23
+
+- Asset verification: 627 of 627 texture PNGs independently match decoded pixels in the creators’ official download archives. All five upstream archive SHA-256 values matched. The retained Kenney notice, three official font binaries, all full notices, and derived atlas files are bound by file hashes. The complete current inventory is in `ASSET_MANIFEST.json`; original code remains covered by project-specific owner permission.
+- Build gate: all 11 Node tests passed, including deliberate changed-font, unknown-image, changed-lockfile, and unknown-CI-action rejection tests. The existing 100-seed checks and five full ordinary-command completion runs remain green. Production compilation passed with the audit gate enabled.
+- Registry security query: npm reported zero known advisories on 2026-10-23. This is a dated registry result, not a guarantee against undiscovered vulnerabilities.
+- New UI integration suite: zero page errors; search/caret retention, learned/all filters, batch costs, locked recipe research links, prerequisite navigation, resource details and pin persistence, modal keyboard handling, larger-text persistence, credits/register/license links, offline continue and offline license notices passed.
+- New touch UI checks: portrait 390×844 and landscape 844×390; resource pinning activates once per tap, panels have no horizontal overflow, and structure filters remain functional. Actual screenshots: `test-results/ui-*.png`.
+- Fixes verified during this pass: an early mouse click could be incorrectly suppressed on fast/offline startup; search/filter rerenders restarted panel entry fades; panel scroll positions leaked between unrelated menus. All three are corrected.
+- Physical iPhone Safari, native builds, and long human balancing sessions remain untested.
+
+## Original 1.0 delivery (historical)
+
 - Production build: esbuild bundle, static assets and all three atlases emitted successfully.
 - Node simulation suite: 9 tests passed. Includes 100 deterministic seeds and five ordinary-command full simulated playthroughs, with all twelve regions, every building type, upgrades, all discoveries, restoration, the ending and post-ending mastery. No resource grants are used in these playthroughs.
 - Save checks: checksum rejection, negative inventory rejection, immutable seed reconstruction, one-time rewards, pending expedition reconstruction, infrastructure upgrades, version-1 migration and invalid production target rejection.

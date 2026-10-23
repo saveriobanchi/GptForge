@@ -6,12 +6,13 @@ An isometric exploration and infrastructure game, developed separately in **GptF
 
 **Live game:** https://aetherforge-white-horizon.banchisaverio.chatgpt.site (owner-private Sites hosting; sign in with the owning ChatGPT account).
 
-**Download the verified browser build:** https://github.com/saveriobanchi/GptForge/actions/runs/40031165692/artifacts/12535780007
+**Version 1.1:** a redesigned field interface with textured oak/iron frames, original compass and tool icons, searchable catalogues, ingredient ownership/costs, research prerequisite links, resource details and persistent HUD pins, production filters, larger text, and in-game license credits. Existing saves remain compatible.
 
 The production browser build is also generated locally in `dist/`. GitHub Actions passed installation, all simulation tests, production compilation and browser QA. Initial GitHub Pages activation was denied with `Resource not accessible by integration`; the game was successfully published to Sites instead. To enable the optional Pages mirror, open **Settings → Pages → Build and deployment → Source: GitHub Actions**, then rerun the workflow. No repository visibility change is needed. See [deployment details](docs/DEPLOYMENT.md).
 
 ```sh
 npm ci
+npm run audit:assets
 npm test
 npm run build
 npm start
@@ -37,10 +38,14 @@ This deliverable is a browser edition, using the reference's actual web architec
 
 ## Artwork and licensing
 
-The checked-in `public/art/` contains 1,299 baked frames. Their source renderer is in `src/render/blocks/`; new biome artwork is in `exploration.ts`. The original CC0 texture inputs are losslessly packaged in `art/cc0-source.tar.gz` to keep the checkout compact. `npm run art` unpacks and rebuilds all artwork. Font and asset attribution is retained in [docs/REFERENCE_ASSETS.md](docs/REFERENCE_ASSETS.md), [THIRD_PARTY_ASSETS.md](THIRD_PARTY_ASSETS.md), and `licenses/`.
+The checked-in `public/art/` contains 1,299 baked frames. Their source renderer is in `src/render/blocks/`; new biome artwork is in `exploration.ts`. The original CC0 texture inputs are losslessly packaged in `art/cc0-source.tar.gz` to keep the checkout compact. `npm run art` unpacks and rebuilds all artwork.
+
+The current distribution was independently audited on **2026-10-23**: all **627 texture PNGs** match pixels from the creators’ official downloads; the retained upstream notice is verified; all **three fonts** match official, pinned Google Fonts files. The older VT323 webfont was replaced with the official TTF. No new downloaded icon or audio packs were used. See [ASSET_LICENSES.md](ASSET_LICENSES.md) for creators, source URLs, precise distribution conditions and credits, [ASSET_MANIFEST.json](ASSET_MANIFEST.json) for per-file/upstream hashes, and `licenses/` for full notices. The register also covers the 28 npm packages, four pinned Python QA packages, and seven pinned CI action references.
+
+Builds run `audit:assets` first and reject unknown/changed media, changed lockfiles, or unreviewed CI actions. The deployed build includes the register and full notices, including offline availability. This audit covers the current distribution; it does not clear repository history or grant other people rights in the owner’s original code. The historical reference attribution is retained separately in [docs/REFERENCE_ASSETS.md](docs/REFERENCE_ASSETS.md).
 
 ## Verification
 
-`npm test` checks 100 deterministic seeds, resource coverage, connected geography, locked-region protection, spending/crafting invariants, automated production, biome rules, unique rewards, and save reconstruction. It also completes five full simulated playthroughs using ordinary gathering/crafting/research commands, without granting resources, including every biome, every building and upgrades, restoration, ending and mastery.
+`npm test` runs 11 checks covering the asset gate, 100 deterministic seeds, resource coverage, connected geography, locked-region protection, spending/crafting invariants, automated production, biome rules, unique rewards, and save reconstruction. It also completes five full simulated playthroughs using ordinary gathering/crafting/research commands, without granting resources, including every biome, every building and upgrades, restoration, ending and mastery.
 
-`python tests/browser.py` exercises the production build in Chromium: mouse gathering, all major menus, building placement, crafting, save/continue, mobile portrait and landscape navigation, and touch pan/pinch. It writes screenshots and a factual report to `test-results/`. Requires Python Playwright and Chromium. The workflow installs these. Device emulation is not a substitute for physical iPhone Safari verification.
+`python tests/browser.py` exercises the production build in Chromium: mouse gathering, all major menus, building placement, crafting, save/continue, mobile portrait and landscape navigation, and touch pan/pinch. `python tests/ui.py` verifies the new search/filter, batching, research, pinning, accessibility settings, license links, offline resume, and single-activation touch flows. Both write screenshots and factual reports to `test-results/`. Install the audited QA environment with `pip install --require-hashes -r requirements-qa.txt`, plus Chromium. Device emulation is not a substitute for physical iPhone Safari verification.

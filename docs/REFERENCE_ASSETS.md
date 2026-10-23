@@ -1,5 +1,7 @@
 # Third-party assets
 
+> Historical attribution copied from Claude-AETHERFORGE. Paths and dependency tables below describe that reference project. White Horizon’s independently verified current inventory is [ASSET_LICENSES.md](../ASSET_LICENSES.md) and [ASSET_MANIFEST.json](../ASSET_MANIFEST.json). The Assorted pack’s complete source is https://opengameart.org/content/assorted-minecraft-style-textures; White Horizon 1.1 uses the official VT323 TTF, replacing the inherited webfont.
+
 Everything visible or audible in Aetherforge that is not listed here is
 **original work created for this project**:
 

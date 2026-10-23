@@ -9,7 +9,7 @@ export class WorldView{
  key(type,t=0){const sp=this.art.sprites[type];if(!sp)return null;const v=sp.main,n=sp.variants[v];return `${type}:${v}:${this.s.settings.reducedMotion?0:Math.floor(t*sp.fps)%n}`;}
  draw(key,x,y,scale=1,alpha=1){const r=this.art.rects[key];if(!r)return;const [s,sx,sy,w,h,ax,ay]=r;const c=this.ctx;c.globalAlpha=alpha;c.drawImage(this.sheets[s],sx,sy,w,h,Math.round(x-ax*scale),Math.round(y-ay*scale),w*scale,h*scale);c.globalAlpha=1;}
  sprite(type,x,y,t=0,scale=1,alpha=1){const k=this.key(type,t);if(k)this.draw(k,x,y,scale,alpha);}
- icon(type){let k=this.art.rects['icon:'+type]?'icon:'+type:this.key(type,0);if(!k)return '';const [s,x,y,w,h]=this.art.rects[k];let c=document.createElement('canvas');c.width=w;c.height=h;c.getContext('2d').drawImage(this.sheets[s],x,y,w,h,0,0,w,h);return c.toDataURL();}
+ icon(type){let k=this.art.rects[type]?type:this.art.rects['icon:'+type]?'icon:'+type:this.key(type,0);if(!k)return '';const [s,x,y,w,h]=this.art.rects[k];let c=document.createElement('canvas');c.width=w;c.height=h;c.getContext('2d').drawImage(this.sheets[s],x,y,w,h,0,0,w,h);return c.toDataURL();}
  screen(wx,wy){return {x:(wx-this.camera.x)*this.camera.zoom+this.w/2,y:(wy-this.camera.y)*this.camera.zoom+this.h/2};}
  world(sx,sy){return{x:(sx-this.w/2)/this.camera.zoom+this.camera.x,y:(sy-this.h/2)/this.camera.zoom+this.camera.y};}
  tileAt(sx,sy){const p=this.world(sx,sy);const x=Math.floor((p.x/32+p.y/16)/2),y=Math.floor((p.y/16-p.x/32)/2);return this.s.tiles.find(t=>t.x===x&&t.y===y);}

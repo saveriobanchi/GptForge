@@ -1,7 +1,16 @@
-import {cpSync,mkdirSync,rmSync} from 'node:fs';
+import {cpSync,mkdirSync,rmSync,readFileSync,writeFileSync,readdirSync} from 'node:fs';
 import {build} from 'esbuild';
+import {auditAssets,sha256} from './audit-assets.mjs';
+console.log('Pre-build asset audit:',JSON.stringify(auditAssets()));
 rmSync('dist',{recursive:true,force:true});mkdirSync('dist',{recursive:true});
 cpSync('public','dist',{recursive:true});
 await build({entryPoints:['src/main.js'],bundle:true,format:'esm',outfile:'dist/game.js',minify:true,sourcemap:true,target:['safari16','chrome110']});
 cpSync('index.html','dist/index.html');cpSync('src/style.css','dist/style.css');
+cpSync('licenses','dist/licenses',{recursive:true});
+cpSync('ASSET_LICENSES.md','dist/ASSET_LICENSES.md');cpSync('ASSET_MANIFEST.json','dist/asset-manifest.json');cpSync('ASSET_MANIFEST.json','dist/ASSET_MANIFEST.json');
+cpSync('docs/provenance','dist/provenance',{recursive:true});
+const list=dir=>readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?list(dir+'/'+e.name):[dir+'/'+e.name]);
+const files=['./','./index.html','./game.js','./style.css','./art/manifest.json','./art/sheet0.png','./art/sheet1.png','./art/sheet2.png',...list('public/fonts').map(p=>'./'+p.slice(7)),...list('licenses').map(p=>'./'+p),'./ASSET_LICENSES.md','./asset-manifest.json','./ASSET_MANIFEST.json'];
+const fingerprint=sha256(Buffer.concat(['dist/game.js','dist/style.css','ASSET_MANIFEST.json'].map(p=>readFileSync(p)))).slice(0,16);
+writeFileSync('dist/sw.js',readFileSync('public/sw.js','utf8').replace('__BUILD_HASH__',fingerprint).replace('__PRECACHE__',JSON.stringify(files)));
 console.log('Production browser build ready in dist/');

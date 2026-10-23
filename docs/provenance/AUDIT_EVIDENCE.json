@@ -1,0 +1,135 @@
+{
+  "auditDate": "2026-10-23",
+  "sources": [
+    {
+      "id": "A1",
+      "name": "16x16 Block Texture Set",
+      "creator": "ARoachIFoundOnMyPillow",
+      "source": "https://opengameart.org/content/16x16-block-texture-set",
+      "license": "CC0-1.0",
+      "archives": [
+        "blocks-a.zip"
+      ],
+      "credit": "No credit required by CC0; creator credited here voluntarily.",
+      "evidence": "Author: ARoachIFoundOnMyPillow. License(s): CC0. \u201cSome 16x16 block and plant textures that I\u2019ve made\u2026\u201d"
+    },
+    {
+      "id": "A2",
+      "name": "16*16 Block Textures",
+      "creator": "ARoachIFoundOnMyPillow",
+      "source": "https://opengameart.org/content/1616-block-textures",
+      "license": "CC0-1.0",
+      "archives": [
+        "blocks-b.zip"
+      ],
+      "credit": "No credit required by CC0; creator credited here voluntarily.",
+      "evidence": "Author: ARoachIFoundOnMyPillow. License(s): CC0. \u201cSome 16x16 block textures I created over the years\u2026\u201d"
+    },
+    {
+      "id": "A3",
+      "name": "Assorted Minecraft style textures",
+      "creator": "JoeEnderman",
+      "source": "https://opengameart.org/content/assorted-minecraft-style-textures",
+      "license": "CC0-1.0",
+      "archives": [
+        "assorted-1.zip",
+        "assorted-2.zip"
+      ],
+      "credit": "No credit required by CC0; creator credited here voluntarily.",
+      "evidence": "Author: JoeEnderman. License(s): CC0. \u201cI was making a texture pack\u2026 here are a bunch of assorted CC0 pieces.\u201d"
+    },
+    {
+      "id": "A4",
+      "name": "Voxel Pack",
+      "creator": "Kenney",
+      "source": "https://kenney.nl/assets/voxel-pack",
+      "license": "CC0-1.0",
+      "archives": [
+        "kenney.zip"
+      ],
+      "credit": "No credit required by CC0; Kenney credited here voluntarily.",
+      "evidence": "Official Kenney asset page: Voxel Pack. License: Creative Commons CC0. Original License.txt is retained."
+    }
+  ],
+  "downloads": [
+    {
+      "path": "blocks-a.zip",
+      "url": "https://opengameart.org/sites/default/files/blocks_2.zip",
+      "final": "https://opengameart.org/sites/default/files/blocks_2.zip",
+      "bytes": 98534,
+      "sha256": "49560e2697cebd7019fec7fd9368120715fd796c88b66e403da3e870c4afa467"
+    },
+    {
+      "path": "blocks-b.zip",
+      "url": "https://opengameart.org/sites/default/files/blocks_0.zip",
+      "final": "https://opengameart.org/sites/default/files/blocks_0.zip",
+      "bytes": 9703,
+      "sha256": "5567742e52f451e465484f692cee62bbd50d49bd04d7929c4f82270d029411ea"
+    },
+    {
+      "path": "kenney.zip",
+      "url": "https://kenney.nl/media/pages/assets/voxel-pack/a3a73d0ff7-1677662501/kenney_voxel-pack.zip",
+      "final": "https://kenney.nl/media/pages/assets/voxel-pack/a3a73d0ff7-1677662501/kenney_voxel-pack.zip",
+      "bytes": 1267464,
+      "sha256": "667c05e3f6d95718aaef888c7fc06f7137ba5dede95f4574deb17d4436257958"
+    },
+    {
+      "path": "assorted-1.zip",
+      "url": "https://opengameart.org/sites/default/files/assorted_textures_1.zip",
+      "sha256": "c63e177de809ee689391deb8bceefb553c7e57de151e999786efb19d866994b5",
+      "bytes": 111839
+    },
+    {
+      "path": "assorted-2.zip",
+      "url": "https://opengameart.org/sites/default/files/assorted_textures_2.zip",
+      "sha256": "8082718fb1c5d4cca66f374c98a7d99e23532b48deb6a2db580c18dbd6f5b6cd",
+      "bytes": 98902
+    }
+  ],
+  "fontCommit": "e7db6ca603fd4862010383ff17ffd6cc4ffac1c0",
+  "fontSources": [
+    {
+      "path": "public/fonts/PixelifySans.ttf",
+      "creator": "The Pixelify Sans Project Authors (Stefie Justprince)",
+      "license": "OFL-1.1",
+      "source": "https://raw.githubusercontent.com/google/fonts/e7db6ca603fd4862010383ff17ffd6cc4ffac1c0/ofl/pixelifysans/PixelifySans%5Bwght%5D.ttf",
+      "sha256": "9ba86cd010a4de309d263ceff8e8044092c9db7efda869620cb9ff1c4389e8a5",
+      "bytes": 79160,
+      "licenseFile": "licenses/PixelifySans-OFL.txt",
+      "licenseSource": "https://raw.githubusercontent.com/google/fonts/e7db6ca603fd4862010383ff17ffd6cc4ffac1c0/ofl/pixelifysans/OFL.txt",
+      "requiredCredit": "Retain the bundled copyright and full SIL OFL 1.1 notice; no separate in-game credit is required.",
+      "modifications": "No changes to font software; downloaded bytes are unchanged. Local filenames simplified only."
+    },
+    {
+      "path": "public/fonts/AtkinsonHyperlegible.ttf",
+      "creator": "Braille Institute of America, Inc.",
+      "license": "OFL-1.1",
+      "source": "https://raw.githubusercontent.com/google/fonts/e7db6ca603fd4862010383ff17ffd6cc4ffac1c0/ofl/atkinsonhyperlegible/AtkinsonHyperlegible-Regular.ttf",
+      "sha256": "7fb917c89019896d0b52ee84b7cbb3304c18cb90b19a62f5e32712bd23e97669",
+      "bytes": 54348,
+      "licenseFile": "licenses/AtkinsonHyperlegible-OFL.txt",
+      "licenseSource": "https://raw.githubusercontent.com/google/fonts/e7db6ca603fd4862010383ff17ffd6cc4ffac1c0/ofl/atkinsonhyperlegible/OFL.txt",
+      "requiredCredit": "Retain the bundled copyright and full SIL OFL 1.1 notice; no separate in-game credit is required.",
+      "modifications": "No changes to font software; downloaded bytes are unchanged. Local filenames simplified only."
+    },
+    {
+      "path": "public/fonts/VT323.ttf",
+      "creator": "The VT323 Project Authors (Peter Hull)",
+      "license": "OFL-1.1",
+      "source": "https://raw.githubusercontent.com/google/fonts/e7db6ca603fd4862010383ff17ffd6cc4ffac1c0/ofl/vt323/VT323-Regular.ttf",
+      "sha256": "cf4de751ada78ceac033dbe16a687742939995b77bc2a052ae17a4957958594d",
+      "bytes": 153116,
+      "licenseFile": "licenses/VT323-OFL.txt",
+      "licenseSource": "https://raw.githubusercontent.com/google/fonts/e7db6ca603fd4862010383ff17ffd6cc4ffac1c0/ofl/vt323/OFL.txt",
+      "requiredCredit": "Retain the bundled copyright and full SIL OFL 1.1 notice; no separate in-game credit is required.",
+      "modifications": "No changes to font software; downloaded bytes are unchanged. Local filenames simplified only."
+    }
+  ],
+  "pixelVerification": {
+    "totalFiles": 628,
+    "matchedPNGFiles": 627,
+    "unverified": 0,
+    "transparentNormalization": "Only fully transparent RGB bytes were normalized; alpha, dimensions and all visible pixels must match."
+  },
+  "noUnverifiedAssetsRetained": true
+}

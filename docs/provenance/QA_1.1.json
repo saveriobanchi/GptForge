@@ -1,0 +1,81 @@
+{
+  "browser": {
+    "browserErrors": [],
+    "desktop": "pass",
+    "mouseGather": "pass",
+    "buildPlacement": "pass",
+    "crafting": "pass",
+    "saveContinue": "pass",
+    "touchPanPinch": "pass",
+    "mobileLandscapePortraitMenus": "pass",
+    "headlessDesktopFrameTiming": {
+      "meanMs": 16.50500000000931,
+      "maxMs": 16.799999999999955
+    }
+  },
+  "ui": {
+    "browserErrors": [],
+    "searchAndCaret": "pass",
+    "recipeBatchAndLocks": "pass",
+    "researchLinks": "pass",
+    "resourcePinPersistence": "pass",
+    "modalKeyboard": "pass",
+    "largeTextPersistence": "pass",
+    "creditsAndNotices": "pass",
+    "offlineGameAndLicenseNotices": "pass",
+    "phoneTouchSingleActivationAndLayout": "pass"
+  },
+  "scope": "Local Chromium production-build QA; desktop, emulated touch landscape and portrait. Physical iPhone Safari untested.",
+  "date": "2026-10-23",
+  "gameVersion": "1.1.0",
+  "nodeTests": {
+    "passed": 11,
+    "seedCount": 100,
+    "ordinaryCommandCompletionRuns": 5
+  },
+  "assetAudit": {
+    "verifiedTexturePNGs": 627,
+    "verifiedFonts": 3,
+    "unknownIncludedMedia": 0,
+    "npmKnownAdvisories": 0,
+    "scope": "Current distribution; repository history excluded."
+  },
+  "buildHashes": {
+    "icon.svg": "2093ad3e449e454dae5a8641dcd0636e4f284ea028f018cd154353b03924ebfc",
+    "game.js": "a27ad5eafcb8bd53fe452c33b290f86c7dec2b944d85e65789a95d42b5fe78da",
+    "ASSET_MANIFEST.json": "754896d09fc3c43a1886eaa074db1507825c45ccfb51bf35b54663382f61e6d7",
+    "ASSET_LICENSES.md": "b8257e321c4a7a068da16e39bfe347a8784143c841054b7ca75b70a51bc926f9",
+    "asset-manifest.json": "754896d09fc3c43a1886eaa074db1507825c45ccfb51bf35b54663382f61e6d7",
+    "sw.js": "406df8b38eaf8754c43cd3e585c1d5e4437f82e5e86486ff0345bc3683aa1884",
+    "style.css": "0fb59b47012c9fbf34d64a6315ef013198586473574188e0115dd890ee8177f5",
+    "index.html": "58d6c7a0282e709f84012006c1e4733e30897e2b41b4a00d5adab1935d703887",
+    "manifest.webmanifest": "2f0125aae16d8c0d961fa337f602d17b4236b91ce92f066a8d504ef74e909bb1",
+    "game.js.map": "6ec42100b9dd302dc19cdff62062342099e4c2ab1dd79b15a9f479244228a7a8",
+    "art/sheet0.png": "2fbee171c434508f6d89edc6dbf477bdba709542c20e4d2bf93c1ad0c28824bb",
+    "art/manifest.json": "0f0e81dd2f74d4ec40225b6a91a374fcc22017d189ec611c40ea830737a3d8e7",
+    "art/sheet2.png": "0a673c66877f44588a22f507603825c987d51e701a37cf3932a9e421651babcb",
+    "art/sheet1.png": "70e0cdb504b15fe764132916a9ad109baae8b1c7f6d19b1f9758b4492655e533",
+    "provenance/AUDIT_EVIDENCE.json": "21d7fad4682df327c462cc5cf36fa22fe7eb8e577e6c2e5312b3504a1cd6b520",
+    "fonts/AtkinsonHyperlegible.ttf": "7fb917c89019896d0b52ee84b7cbb3304c18cb90b19a62f5e32712bd23e97669",
+    "fonts/PixelifySans.ttf": "9ba86cd010a4de309d263ceff8e8044092c9db7efda869620cb9ff1c4389e8a5",
+    "fonts/VT323.ttf": "cf4de751ada78ceac033dbe16a687742939995b77bc2a052ae17a4957958594d",
+    "licenses/AtkinsonHyperlegible-OFL.txt": "f32d22b3908fcad2c86a74000614ec22e6a7f66ea7e867e616026a27aebdc143",
+    "licenses/PixelifySans-OFL.txt": "b66ba46f511a851ab09998b5a5a9fdbb102545a3864cb993095e1745996873a7",
+    "licenses/VT323-OFL.txt": "27d9af34210253e7ca1251fbace86c6f65b40031d6ce1a75493a1b2093631298",
+    "licenses/CC0-1.0.txt": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+    "licenses/dependencies/pngjs-MIT.txt": "be75ef59c5cf59715588a17a82dff7dd3e83c4dba3c458676bb9311e05fbedc5",
+    "licenses/dependencies/greenlet-LICENSE.PSF": "e5ff3c23c110e494cd7d736c10fd96d462457bafeca310840db6527298c7d46b",
+    "licenses/dependencies/actions-upload-artifact-MIT.txt": "3e855ffa704114a51628ef8f0bf3aeb41728adf9d9070e263bf58aa5640b0eb5",
+    "licenses/dependencies/pyee-LICENSE": "1ff556ca206b107f10e1c562ae454d3292e0296c3510eb90eb7f114caee32a66",
+    "licenses/dependencies/actions-setup-node-MIT.txt": "7d070f6b64d9bcc530fe99cc21eaaa4b3c364e0b2d367d7735671fa202a03b32",
+    "licenses/dependencies/actions-configure-pages-MIT.txt": "741d1031b351a6dc8421130e3282456afe884068596134683fd5e5f8188363ee",
+    "licenses/dependencies/typing_extensions-LICENSE": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+    "licenses/dependencies/actions-upload-pages-artifact-MIT.txt": "b1bb6c1d76d90892ac4a9d1cca6380316df22671560c6cf4a5e298dcfa26bb4d",
+    "licenses/dependencies/actions-checkout-MIT.txt": "3e855ffa704114a51628ef8f0bf3aeb41728adf9d9070e263bf58aa5640b0eb5",
+    "licenses/dependencies/esbuild-MIT.txt": "b40ec5baec7bb34fa5b1c09521fa3cd52d5fad7adafed74932a2010d3612a681",
+    "licenses/dependencies/greenlet-LICENSE": "769831d6e5dfaf2c20802faccff1fafb4c2025dd8f6253dfa47fcad59d4d0979",
+    "licenses/dependencies/actions-deploy-pages-MIT.txt": "741d1031b351a6dc8421130e3282456afe884068596134683fd5e5f8188363ee",
+    "licenses/dependencies/actions-setup-python-MIT.txt": "7d070f6b64d9bcc530fe99cc21eaaa4b3c364e0b2d367d7735671fa202a03b32",
+    "licenses/dependencies/playwright-Apache-2.0.txt": "7fab1461b41970ff376f1c9303a637076bfaaeb71cd12dd3a1c44aaf59a1a2b9"
+  }
+}

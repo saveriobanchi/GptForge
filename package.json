@@ -1,13 +1,14 @@
 {
   "name": "aetherforge-white-horizon",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "type": "module",
   "scripts": {
     "art": "node scripts/unpack-art.mjs && node scripts/bake-art.mjs",
     "build": "node scripts/build.mjs",
     "test": "node --test --test-isolation=none tests/*.test.mjs",
-    "start": "python3 -m http.server 4173 -d dist"
+    "start": "python3 -m http.server 4173 -d dist",
+    "audit:assets": "node scripts/audit-assets.mjs"
   },
   "devDependencies": {
     "esbuild": "0.28.2",
